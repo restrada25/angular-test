@@ -1,10 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-light default-color lighten-4">
+  <a class="navbar-brand" routerLink='/' routerLinkActive='active'>Github Search</a>
+  <div class="collapse navbar-collapse" id="basicExampleNav"></div>
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+        <a class="nav-link" routerLink='/' routerLinkActive='active'>Home</a>
+    </li>
+    <li class="nav-item active">
+        <a class="nav-link" routerLink='/search' routerLinkActive='active'>Search
+          <span class="sr-only">(current)</span>
+        </a>
+    </li>
+  </ul>
+</nav>
+
+<i class="fa fa-github fa-4x" aria-hidden="true"></i>
 <h3>{{title}} - {{displayQuery}} page:{{pageNumber}}</h3>
 <input (keyup.enter)='newSearch()' name='query' placeholder='Enter Search Here' [(ngModel)]='searchQuery' />
-<button (click)='newSearch()' class="btn btn-primary btn-md" class='enterButton'>Submit</button>
+<button (click)='newSearch()' class="btn btn-success">Submit</button>
 <div *ngIf='searchResults; else elseBlock'>
   <h3 class='total'>Total Results: {{searchResults.total_count}}</h3>
-  <ul class='list'>
-    <li [ngStyle]="{'background-color' : (i % 2 === 0) ? 'silver' : 'white'}" class='list_item' *ngFor='let result of searchResults.items; index as i' >
+  <ul class="list-group">
+    <li [ngStyle]="{'background-color' : (i % 2 === 0) ? 'silver' : 'white'}" class="list-group-item" *ngFor='let result of searchResults.items; index as i' >
       <a [href]='result.html_url'>
         <img class='avatar' [src]='result.owner.avatar_url' />
         <h4 class='title'>{{result.name}}
@@ -15,7 +31,7 @@
       <p>Created on: {{result.created_at | date:'fullDate'}}</p>
     </li>
   </ul>
-  <button (click)="previousPage()"  class="previousButton" *ngIf="pageNumber>1" >&laquo; Previous</button>
-  <button (click)='nextPage()' class="nextButton">Next &raquo;</button>
+  <button (click)="previousPage()"  class="btn btn-elegant" *ngIf="pageNumber>1" >&laquo; Previous</button>
+  <button (click)='nextPage()' class="btn btn-elegant">Next &raquo;</button>
 </div>
 <ng-template #elseBlock>Loading...</ng-template>
