@@ -14,8 +14,10 @@
 </nav>
 
 <i class="fa fa-github fa-4x" aria-hidden="true"></i>
-<h3>{{title}} - {{displayQuery}} page:{{pageNumber}}</h3>
-<input (keyup.enter)='newSearch()' name='query' placeholder='Enter Search Here' [(ngModel)]='searchQuery' />
+<h3>{{title}} - {{displayQuery}} - Page: {{pageNumber}}</h3>
+<div class="md-form" id="searchBar">
+  <input class="form-control" type="text" (keyup.enter)='newSearch()' name='query' placeholder='Search' aria-label="Search" [(ngModel)]='searchQuery' />
+</div>
 <button (click)='newSearch()' class="btn btn-success">Submit</button>
 <div *ngIf='searchResults; else elseBlock'>
   <h3 class='total'>Total Results: {{searchResults.total_count}}</h3>
