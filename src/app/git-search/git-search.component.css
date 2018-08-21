@@ -20,6 +20,9 @@
   display: inline-block;
   width: 25%;
 }
+.loading {
+  display: block;
+}
 /*
 .title {
   font-size: 20px;

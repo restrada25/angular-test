@@ -36,4 +36,4 @@
   <button (click)="previousPage()"  class="btn btn-elegant" *ngIf="pageNumber>1" >&laquo; Previous</button>
   <button (click)='nextPage()' class="btn btn-elegant">Next &raquo;</button>
 </div>
-<ng-template #elseBlock>Loading...</ng-template>
+<ng-template #elseBlock><div class="loading">Loading...</div></ng-template>
