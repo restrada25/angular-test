@@ -1,6 +1,6 @@
 <h3>{{title}} - {{displayQuery}} page:{{pageNumber}}</h3>
 <input (keyup.enter)='newSearch()' name='query' placeholder='Enter Search Here' [(ngModel)]='searchQuery' />
-<button (click)='newSearch()' class='enterButton'>Submit</button>
+<button (click)='newSearch()' class="btn btn-primary btn-md" class='enterButton'>Submit</button>
 <div *ngIf='searchResults; else elseBlock'>
   <h3 class='total'>Total Results: {{searchResults.total_count}}</h3>
   <ul class='list'>
