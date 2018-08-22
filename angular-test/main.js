@@ -713,7 +713,7 @@ module.exports = ".homePage {\n  padding-top: 25%;\n  padding-bottom: 25%;\n}\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-lg navbar-light default-color lighten-4\">\n  <a class=\"navbar-brand\" routerLink='/' routerLinkActive='active'>Github Search</a>\n  <div class=\"collapse navbar-collapse\" id=\"basicExampleNav\"></div>\n  <ul class=\"navbar-nav mr-auto\">\n    <li class=\"nav-item active\">\n        <a class=\"nav-link\" href=\"/\">Home</a>\n    </li>\n    <li class=\"nav-item\">\n        <a class=\"nav-link\" routerLink='/search' routerLinkActive='active'>Search\n          <span class=\"sr-only\">(current)</span>\n        </a>\n    </li>\n  </ul>\n</nav>\n<h1 class=\"homePage\">\n  Welcome to the Angular Fundamentals Git Search!\n</h1>\n"
+module.exports = "<nav class=\"navbar navbar-expand-lg navbar-light default-color lighten-4\">\n  <a class=\"navbar-brand\" routerLink='./' routerLinkActive='active'>Github Search</a>\n  <div class=\"collapse navbar-collapse\" id=\"basicExampleNav\"></div>\n  <ul class=\"navbar-nav mr-auto\">\n    <li class=\"nav-item active\">\n        <a class=\"nav-link\" href=\"./\">Home</a>\n    </li>\n    <li class=\"nav-item\">\n        <a class=\"nav-link\" routerLink='/search' routerLinkActive='active'>Search\n          <span class=\"sr-only\">(current)</span>\n        </a>\n    </li>\n  </ul>\n</nav>\n<h1 class=\"homePage\">\n  Welcome to the Angular Fundamentals Git Search!\n</h1>\n"
 
 /***/ }),
 
