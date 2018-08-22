@@ -22,6 +22,13 @@ const appRoutes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'search/:query',
+    component: GitSearchComponent,
+    data: {
+      title: 'Git Search'
+    }
+  },
+  {
     path: 'search/:query/:pageNumber',
     component: GitSearchComponent,
     data: {

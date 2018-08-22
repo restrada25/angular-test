@@ -25,6 +25,9 @@ export class GitSearchComponent implements OnInit {
       this.searchQuery = params.get('query');
       this.displayQuery = params.get('query');
       this.pageNumber = parseInt(params.get('pageNumber'), 10);
+      if (isNaN(this.pageNumber)) {
+        this.pageNumber = 1;
+      }
       this.gitSearch();
     });
     this.route.data.subscribe((result) => {
@@ -45,10 +48,10 @@ export class GitSearchComponent implements OnInit {
     this.router.navigate(['/search/' + this.searchQuery + '/' + this.pageNumber]);
   }
 
-  newSearch = () => {
-    this.pageNumber = 1;
-    this.sendQuery();
-  }
+  // newSearch = () => {
+  //   this.pageNumber = 1;
+  //   this.sendQuery();
+  // }
 
   nextPage = () => {
     this.pageNumber ++;

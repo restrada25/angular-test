@@ -1,12 +1,12 @@
 <nav class="navbar navbar-expand-lg navbar-light default-color lighten-4">
-  <a class="navbar-brand" routerLink='/' routerLinkActive='active'>Github Search</a>
+  <a class="navbar-brand" routerLink='./' routerLinkActive='active'>Github Search</a>
   <div class="collapse navbar-collapse" id="basicExampleNav"></div>
   <ul class="navbar-nav mr-auto">
     <li class="nav-item">
-        <a class="nav-link" routerLink='/' routerLinkActive='active'>Home</a>
+        <a class="nav-link" routerLink='./' routerLinkActive='active'>Home</a>
     </li>
     <li class="nav-item active">
-        <a class="nav-link" routerLink='/search' routerLinkActive='active'>Search
+        <a class="nav-link" routerLink='./search' routerLinkActive='active'>Search
           <span class="sr-only">(current)</span>
         </a>
     </li>
@@ -16,9 +16,9 @@
 <i class="fa fa-github fa-4x" aria-hidden="true"></i>
 <h3>{{title}} - {{displayQuery}} - Page: {{pageNumber}}</h3>
 <div class="md-form" id="searchBar">
-  <input class="form-control" type="text" (keyup.enter)='newSearch()' name='query' placeholder='Search' aria-label="Search" [(ngModel)]='searchQuery' />
+  <input class="form-control" type="text" (keyup.enter)='sendQuery()' name='query' placeholder='Search' aria-label="Search" [(ngModel)]='searchQuery' />
 </div>
-<button (click)='newSearch()' class="btn btn-success">Submit</button>
+<button (click)='sendQuery()' class="btn btn-success">Submit</button>
 <div *ngIf='searchResults; else elseBlock'>
   <h3 class='total'>Total Results: {{searchResults.total_count}}</h3>
   <ul class="list-group">
